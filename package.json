@@ -1,5 +1,5 @@
 {
-  "name": "lcode-webdav",
+  "name": "webdav",
   "displayName": "lcode webdav editor",
   "description": "webdav",
   "publisher": "lcode",
@@ -11,8 +11,18 @@
     "Other"
   ],
   "activationEvents": [
-    "onFileSystem:webdav"
+    "onFileSystem:webdav",
+    "onCommand:lcode.webdav.open"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "lcode.webdav.open",
+        "title": "Open Webdav URI ...",
+        "category": "Remote Workspace"
+      }
+    ]
+  },
   "main": "./lib/extension.js",
   "scripts": {
     "lint": "eslint .",
@@ -31,6 +41,7 @@
     "typescript": "^4.7.2"
   },
   "dependencies": {
+    "vscode-helpers": "^9.0.0",
     "webdav": "^4.10.0"
   }
 }
