@@ -25,11 +25,19 @@
   },
   "main": "./lib/extension.js",
   "browser": "./dist/web-bundle.js",
+  "files": [
+    "dist/",
+    "lib/"
+  ],
+  "repository": {
+    "url": "https://github.com/vscode-lcode/webdav"
+  },
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",
     "test": "node ./test/runTest.js",
-    "build:web": "webpack"
+    "build:web": "webpack",
+    "vscode:prepublish": "npm run build:web"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
@@ -41,6 +49,7 @@
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
     "typescript": "^4.7.2",
+    "vsce": "^2.9.2",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   },
