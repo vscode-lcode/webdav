@@ -14,7 +14,7 @@ void (function fixWebdavBrowserField() {
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 /** @type WebpackConfig */
 const webExtensionConfig = {
-  mode: "production", // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
+  mode: "none", // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
   target: "webworker", // extensions run in a webworker context
   entry: {
     extension: "./lib/extension.js", // source of the web extension main file
