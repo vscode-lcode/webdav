@@ -18,8 +18,7 @@
     "commands": [
       {
         "command": "lcode.webdav.open",
-        "title": "Open Webdav URI ...",
-        "category": "Remote Workspace"
+        "title": "lcode webdav open"
       }
     ]
   },
